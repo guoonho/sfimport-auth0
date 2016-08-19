@@ -67,7 +67,7 @@ async.series([
       .on("error", function(err) {
         console.error(err);
       })
-      .run({ autoFetch : true, maxFetch : 9001 });
+      .run({ autoFetch : true });
   }
 ],
 function(err, results) {
