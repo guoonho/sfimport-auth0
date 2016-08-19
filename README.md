@@ -2,9 +2,9 @@
 
 ## Requirements
 
+* [NodeJS](https://nodejs.org/en/)
 
-
-## Installation
+## Installation and Execution
 
 ```bash
 npm install
@@ -25,11 +25,27 @@ run
 node run.js
 ```
 
-output
+The output will be a generic file with a JSON array containing user details. Note the file location.
+
+## Importing to auth0
+
+Navigate to
+
+* [Auth0 Management API](https://auth0.com/docs/api/management/v2)
+
+Scroll and click into Jobs -> Import users
+
+Underneath Scopes click
 
 ```bash
-//../sfimport-auth0/userlist
-<a ton of json>
+create:users
 ```
 
-Keep this file.
+Underneath Parameters
+
+* users - Click and navigate to the file outputted earlier.
+* connection_id - the id of the DB you're importing to. Can be obtained by referring to Connections -> Get all connections earlier in the documentation
+* upsert - true
+* external_id
+
+Execute by clicking TRY
